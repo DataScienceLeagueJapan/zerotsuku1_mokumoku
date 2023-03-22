@@ -38,3 +38,51 @@ plt.ylim(-0.1,1.1)
 plt.show
 
 #3.2.7 ReLU関数
+def relu(x):
+    return np.maximum(0,x)
+
+#3.3.1 多次元配列
+A = np.array([1,2,3,4])
+print(A)
+print(np.ndim(A),A.shape,A.shape[0])
+
+B = np.array([[1,2],[3,4],[5,6]])
+print(B)
+print(B.ndim,B.shape)
+#3.3.2 行列の積
+A = np.array([[1,2],[3,4]])
+print(A.shape)
+B = np.array([[5,6],[7,8]])
+print(B.shape)
+
+print(np.dot(A,B))
+
+A = np.array([[1,2,3],[4,5,6]])
+print(A.shape)
+B = np.array([[1,2],[3,4],[5,6]])
+print(B.shape)
+
+print(np.dot(A,B))
+
+C = np.array([[1,2],[3,4]])
+print(C.shape)
+
+print(A.shape)
+print(np.dot(C,A))#np.dot(A,C)はエラー
+
+A = np.array([[1,2],[3,4],[5,6]])
+print(A.shape)
+B = np.array([7,8])
+print(B.shape)
+print(np.dot(A,B))
+
+#3.3.3 NNの行列の積
+X = np.array([1,2])
+W = np.array([[1,3,5],[2,4,6]])
+print(X.shape)
+print(W)
+print(W.shape)
+Y = np.dot(X,W)
+print(Y)
+
+#以上が関数、行列の基本、
